@@ -1,0 +1,40 @@
+
+////Write the pseudocode and code for a function that determines whether an array is a
+palindrome (reads the same in both directions). What is the time complexity (expressed using
+BigO notation)?
+////
+
+
+
+///// puedocode
+
+
+THISISAPALIDROME (N)
+     IF A = N OR N
+          RETURN FALSE
+RETURN ARR[A]=ARR[N] AND THISISAPALIDROME (ARR, A+1,N-1) 
+   
+
+
+checking if an array is actually palindrome
+#here this functonis recursive as i will call it back at a later time.
+#the three paraeters here show that firstly the Array that i will put in and then also the start of the array and the end of it
+def ThisisaPalidrome(Array, Start, End):
+
+
+    
+#here if the begining of the array (0) is the same as the end (..)or end is less then the start
+#so with the OR fuction if both or one is true then overall it will be returned true    
+    if Start == End or End < Start:
+
+
+        
+#here the true statement will be displayed to all
+        return True
+    
+#otherwise it will be false if the start of the array and the end of the array is the end
+#and also if the array  when the start and end are not then it is false   
+    return   Array[Start] == Array[End] and ThisisaPalidrome(Array,Start+1,End-1)
+
+
+
