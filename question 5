@@ -1,0 +1,34 @@
+/////
+Write a program that reads n words from the standard input, separated by spaces and prints
+them mirrored (the mirroring function should be implemented recursively). What is the time
+complexity of the algorithm? Use the BigO notation to express it.
+/////
+
+
+
+
+
+
+
+
+
+#here is the function that i have created called MirrorTheNmbers and will be called later on in order to give us a output to wha we are looking for
+#one parameter will also be passed for this function and ive named it Nwords.
+def MirrorTheNumbers(Nwords):
+#here i have used a vairable which is going to be the Wrdlength and the index of this function
+#so here we have stored the length of the string within the variable
+
+     WrdLength=len(Nwords)-1
+#this here EndResult s going t be the output for this program and this will be where the string of what ever is unputted will be kept.
+     EndResult=""
+#here i have us3ed a while loop with brackets stating that if the WrdLength is eqal too or gretaer then zero the loop will contnuously repeat.
+     
+     while(WrdLength>=0):
+#here is where the individual characters will be added from end to the begining or 1st
+         EndResult += Nwords[WrdLength]
+
+         WrdLength-=1
+
+     return EndResult
+
+
