@@ -1,0 +1,21 @@
+/////Write a recursive version of linear search on an array of integers. What is the time complexity
+of the algorithm? Use the BigO notation to express it.//
+
+
+#here is my function for my list and it also has a couple of permateres which is the list i am going to search and then also target value im looking 4.
+def MyLinearSearch(TheArray, TargetValue):
+#next im going to have the program search through the whole array for said value etc.
+#also this function will print out all of the elements
+#the for loop is also exculsive and inclusive which means that
+    for M in range ( len( TheArray)):
+#here if the array is equal to the target value that im testing then the array will be returned
+        if TheArray[M]==TargetValue:
+        ##here the function is stopped
+         return M
+#here when the for loop has been completely gone through and the if loop iside is not entered then it is not found and therefore i need tp return -1
+
+
+    return -1
+
+
+
