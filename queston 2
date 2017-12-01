@@ -1,0 +1,45 @@
+///////Check if a 3 digit number is an Armstrong number. An Armstrong number of three digits is an
+integer such that the sum of the cubes of its digits is equal to the number itself. For example,
+371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371. Input: a number, such as 371
+Output: “Yes” if the number is an Armstrong number, “No” if the number is not an Armstrong 
+
+
+#armstrong numbers are numbers that when multipled to the power of how mucg digit the whole number has is then the exazct same as the original number.
+#an exampleof this would be 371 for exampoe as when 3**3,7**3,1**3 are all added to gether they make 371 so this an armstrong number. 
+#to do this i have created a function below and then from that i have used one permaeter called Armstrong where the interger will be stored etc.
+def ThisisMyArmstrong(Armstrong):
+#here is where the lengt of the interger will be stored
+    length=len(Armstrong)
+#here is where the parameter which is as a string will be stored as and converted into a interger
+    n=int(Armstrong)
+#here is when the calculations are done and added up the total and overall umber wil be stored with here
+    Armtotal=0
+#this is where the actual number is stored within 
+    WhNumber=n
+
+#as long as the number is greater then 0 this while loop while run continuously calculating the whether its a amstorng or ot.
+    while n>0:
+#this calculation will find the cube of each of the digits and the sum of it.
+#wit the number inutted into the n varaible and stored as a interger.
+#within this calculation the length of the armstrong will be used in order to help come up wit what its being cubbed by.
+        A=n%10
+#though the use of a while loop the program is able to take each single digit fro it overall number through modulus
+ #here we have to calculate the numbers length which is within vaiarabe length to see if its an armstrong number.   
+#also this will find 
+        Armtotal=Armtotal+(A**length)
+#each one of the digits for the number will be taken and then cubbed with p and then addd to the varaible ArmTotal
+        n=int(n/10)
+#here is where the original number is compared with the current number thats been adding up together and stored within the armtotal varaible.
+    #if the programs sees that these are the same it will true while if not will be put down as false
+    if WhNumber==Armtotal:
+        return True
+    else:
+        return False
+#here this is outsde all of this program and is where the users input is put into the code
+#here they will put there number in that tey want to check if armstrong and the functo wil be called back tobe used again.
+Armstrong=input("please enter your number right over here: ")
+if ThisisMyArmstrong(Armstrong):
+    print(Armstrong, "is in fact a armstrong number!!!!whoopy!!!")
+else:
+    print (Armstrong, "is in fact ****not**** a form of armstrong number. :(")
+
