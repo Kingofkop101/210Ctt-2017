@@ -1,0 +1,33 @@
+////Use binary search in implementing a guessing game. One thinks of a number between 1 and
+20000, the program attempts to guess the number and feedback is given whether my number
+is higher or lower. The program then makes a new guess and so on until it guesses the right
+number.
+////
+
+#here i have created a function in that my game wil be stored with
+def Theguessinggame():
+    min, max, pythonsguess, Theplayers_answer = 0,2000,None,None
+    
+    #this is the bit where i make the game more personal and then allow the players to
+    print ("Hello there my name is Mr.Python the super computer!!!!!Lets play game. What number are you thinking of??")
+#here i will now input the name of the player so that we have a name to go on aswell there guess 
+    nameplayer=input("But first what is you name mannnnn!!!!")
+    print("thats a really wicked name!!"+str(nameplayer)+", okay now that is settled could you please pick a interger betweennnn" +str(min)+ "and" + str(max))
+
+#here we next use the while loopso that rpeats the queston untilo answer is correct
+#this wil keep cutting the space in half and then guessing the middle of it.
+    while (Theplayers_answer!="Correct"):
+#the computers guess will be 0 plus 2000 divided by two as shown and then rounded to the next whole number
+        pythonsguess = (min+max)//2
+#here we are now getting feedback from the python game. str wil ake thenumber a string so it can be printed 
+        Theplayers_answer=input("Calculating....Calculating....Calculating.....99% done. Found is your number...."+str(pythonsguess)+"   Toooooo high? if so type in(High), Toooo Low? if so type in(Low), or am i right? if so type in(Correct)??")
+#if the geuss is equal to high then we set the new minum to last thing we guesssed
+        if Theplayers_answer=="High":
+            max=pythonsguess
+#here the same is done except the new maximum if the is the players guess
+        elif Theplayers_answer=="Low":
+            min=pythonsguess
+    print("HA..HA..HA..HA..! YET AGAIN THE COMPUTER WINS!!!!!!!!!!!!")
+Theguessinggame()                    
+                                
+
