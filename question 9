@@ -1,0 +1,78 @@
+///////////////Based on the Python code or the C++ code provided in class as a starting point, implement a
+function that deletes duplicate value nodes from the list.////////
+
+
+##Implement the node delete function in the programming language of your choice based on the template provided
+#this is the defining the 
+class TheNode(object):
+	def __init__(self, collect):
+  #self. is an instant of the defining function that calls itself
+            #cself.collect is the varaible that calls its self within anything it will return with collect
+		self.collect = collect
+		self.next = None
+		self.prev = None
+
+class NodeList(object):
+	def __init__(self):
+            #here self has called the head or tail and there is nothing curent inside it but that can be filled with a node
+		self.head = None
+		self.tail = None
+
+	#this is the function for before deleting the node 	
+	def BDELNODE(self):
+            #we define the self node over
+            #within the node varaible it is calling self.head which has no value within it
+		Node = self.head
+		#while the node is not none then the given nodes will be shown here
+		#this will keep running until there is a value within it
+		while Node != None:
+                    #this will only run once self.head has a value within it
+			print('Here are the given nodes : ',Node.collect)
+			Node = Node.next
+
+
+	def DELNODEFUNCTION(self, Node):
+            #so if node before has value then it will go to the .next node within this if statement
+		if Node.before != None:
+                    #so if this has value then go to the next node
+			Node.before.next = Node.next
+		    #if no value go to the 
+		else:
+			self.head = Node.next
+		if Node.next != None:
+			Node.next.before = Node.next
+		else:
+			self.tail = Node.before
+		
+	def AFTDELNODEFUNCTION(self):
+		Node = self.head
+		while Node != None:
+			print('Here is the after Node deletion: ',Node.collect)
+			Node = Node.next
+			
+	def INSERTIONOFNODE(self, Node, Z):
+		if Node != None:
+			Z.next = Node.next
+			Node.next = Z
+			Z.before = Node
+			if Z.next != None:
+				Z.next.before = Z
+		if self.head == None:
+			self.head = self.tail = Z
+			Z.before = Z.next = None
+		elif self.tail == None:
+			self.tail = Zrange
+
+	
+A= TheNode(23)
+B= TheNode(123)
+C= TheNode(12)
+D= TheNode(12)
+L=NodeList()
+L.INSERTIONOFNODE(None, A)
+L.INSERTIONOFNODE(L.head,B)
+L.INSERTIONOFNODE(L.head,C)
+L.INSERTIONOFNODE(L.head,D)
+L.BDELNODE()
+L.DELNODEFUNCTION(D)
+L.AFTDELNODEFUNCTION()
