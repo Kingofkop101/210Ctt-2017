@@ -1,0 +1,15 @@
+////// Write a method that combines two strings, by taking one character from the first string, then
+one from the second string and so on. Once one string has no characters left it should carry on
+with the other string. For example, for strings "day" and "time" should give the result
+"dtaiyme"/////
+
+
+
+#here is a simple method function that will allow both characters to one by one put next to eachother to form a new word
+#here are the paremeters that are being used  and will be the place holders for the different wrds will try
+def Letsmixthemup(One, Two):
+#this is a if statement here tha
+    if not (One and Two):
+        return One + Two
+#this statement here states that both one and twos first letters 0 will be added together with 1: which has been split apart and that will contine
+    return One[0] + Two[0] + Letsmixthemup(One[1:], Two[1:])
